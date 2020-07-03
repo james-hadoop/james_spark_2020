@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite 
+errors="0" failures="0" hostname="JamesUbuntu18" name="org.scalatest.tools.DiscoverySuite" tests="0" time="0.006" timestamp="2020-07-03T21:17:56">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment">
+    </property>
+    <property 
+    name="sun.boot.library.path" value="/home/james/install/jdk1.8.0_211/jre/lib/amd64">
+</property>
+    <property name="java.vm.version" value="25.211-b12"> </property>
+    <property name="java.vm.vendor" value="Oracle Corporation"> </property>
+    <property name="java.vendor.url" value="http://java.oracle.com/">
+    </property>
+    <property name="path.separator" value=":"> </property>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM">
+    </property>
+    <property name="file.encoding.pkg" value="sun.io"> </property>
+    <property name="user.country" value="CN"> </property>
+    <property name="sun.java.launcher" value="SUN_STANDARD"> </property>
+    <property name="sun.os.patch.level" value="unknown"> </property>
+    <property 
+    name="java.vm.specification.name" value="Java Virtual Machine Specification">
+</property>
+    <property 
+    name="user.dir" value="/home/james/workspace4os/spark-2.4.6/common/tags">
+</property>
+    <property name="java.runtime.version" value="1.8.0_211-b12"> </property>
+    <property name="spark.ui.enabled" value="false"> </property>
+    <property 
+    name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment">
+</property>
+    <property 
+    name="basedir" value="/home/james/workspace4os/spark-2.4.6/common/tags">
+</property>
+    <property 
+    name="java.endorsed.dirs" value="/home/james/install/jdk1.8.0_211/jre/lib/endorsed">
+</property>
+    <property name="os.arch" value="amd64"> </property>
+    <property 
+    name="java.io.tmpdir" value="/home/james/workspace4os/spark-2.4.6/common/tags/target/tmp">
+</property>
+    <property name="derby.system.durability" value="test"> </property>
+    <property name="line.separator" value=" "> </property>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation">
+    </property>
+    <property name="os.name" value="Linux"> </property>
+    <property 
+    name="log4j.configuration" value="file:src/test/resources/log4j.properties">
+</property>
+    <property name="sun.jnu.encoding" value="UTF-8"> </property>
+    <property name="spark.ui.showConsoleProgress" value="false"> </property>
+    <property 
+    name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib">
+</property>
+    <property 
+    name="java.specification.name" value="Java Platform API Specification">
+</property>
+    <property name="java.class.version" value="52.0"> </property>
+    <property 
+    name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers">
+</property>
+    <property name="os.version" value="4.18.0-25-generic"> </property>
+    <property name="user.home" value="/home/james"> </property>
+    <property name="user.timezone" value=""> </property>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob">
+    </property>
+    <property name="java.specification.version" value="1.8"> </property>
+    <property name="file.encoding" value="UTF-8"> </property>
+    <property name="spark.testing" value="1"> </property>
+    <property name="user.name" value="james"> </property>
+    <property 
+    name="java.class.path" value="/home/james/workspace4os/spark-2.4.6/common/tags/target/scala-2.11/test-classes:/home/james/workspace4os/spark-2.4.6/common/tags/target/scala-2.11/classes:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/modules/scala-parser-combinators_2.11/1.1.0/scala-parser-combinators_2.11-1.1.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/junit/junit/4.12/junit-4.12.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar">
+</property>
+    <property name="java.vm.specification.version" value="1.8"> </property>
+    <property name="sun.arch.data.model" value="64"> </property>
+    <property name="java.home" value="/home/james/install/jdk1.8.0_211/jre">
+    </property>
+    <property 
+    name="sun.java.command" value="org.scalatest.tools.Runner -R /home/james/workspace4os/spark-2.4.6/common/tags/target/scala-2.11/classes /home/james/workspace4os/spark-2.4.6/common/tags/target/scala-2.11/test-classes -o -f /home/james/workspace4os/spark-2.4.6/common/tags/target/surefire-reports/SparkTestSuite.txt -u /home/james/workspace4os/spark-2.4.6/common/tags/target/surefire-reports/.">
+</property>
+    <property name="java.specification.vendor" value="Oracle Corporation">
+    </property>
+    <property name="user.language" value="zh"> </property>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"> </property>
+    <property name="java.vm.info" value="mixed mode"> </property>
+    <property name="java.version" value="1.8.0_211"> </property>
+    <property 
+    name="java.ext.dirs" value="/home/james/install/jdk1.8.0_211/jre/lib/ext:/usr/java/packages/lib/ext">
+</property>
+    <property 
+    name="sun.boot.class.path" value="/home/james/install/jdk1.8.0_211/jre/lib/resources.jar:/home/james/install/jdk1.8.0_211/jre/lib/rt.jar:/home/james/install/jdk1.8.0_211/jre/lib/sunrsasign.jar:/home/james/install/jdk1.8.0_211/jre/lib/jsse.jar:/home/james/install/jdk1.8.0_211/jre/lib/jce.jar:/home/james/install/jdk1.8.0_211/jre/lib/charsets.jar:/home/james/install/jdk1.8.0_211/jre/lib/jfr.jar:/home/james/install/jdk1.8.0_211/jre/classes">
+</property>
+    <property 
+    name="spark.test.home" value="/home/james/workspace4os/spark-2.4.6">
+</property>
+    <property name="java.vendor" value="Oracle Corporation"> </property>
+    <property name="java.awt.headless" value="true"> </property>
+    <property name="file.separator" value="/"> </property>
+    <property 
+    name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/">
+</property>
+    <property name="spark.unsafe.exceptionOnMemoryLeak" value="true">
+    </property>
+    <property name="sun.cpu.endian" value="little"> </property>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"> </property>
+    <property name="sun.desktop" value="gnome"> </property>
+    <property name="test.src.tables" value="__not_used__"> </property>
+    <property name="sun.cpu.isalist" value=""> </property>
+  </properties>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

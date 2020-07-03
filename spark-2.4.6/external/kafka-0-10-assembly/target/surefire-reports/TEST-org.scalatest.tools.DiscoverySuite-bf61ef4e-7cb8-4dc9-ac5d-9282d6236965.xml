@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite 
+errors="0" failures="0" hostname="JamesUbuntu18" name="org.scalatest.tools.DiscoverySuite" tests="0" time="0.01" timestamp="2020-07-03T21:26:11">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment">
+    </property>
+    <property 
+    name="sun.boot.library.path" value="/home/james/install/jdk1.8.0_211/jre/lib/amd64">
+</property>
+    <property name="java.vm.version" value="25.211-b12"> </property>
+    <property name="java.vm.vendor" value="Oracle Corporation"> </property>
+    <property name="java.vendor.url" value="http://java.oracle.com/">
+    </property>
+    <property name="path.separator" value=":"> </property>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM">
+    </property>
+    <property name="file.encoding.pkg" value="sun.io"> </property>
+    <property name="user.country" value="CN"> </property>
+    <property name="sun.java.launcher" value="SUN_STANDARD"> </property>
+    <property name="sun.os.patch.level" value="unknown"> </property>
+    <property 
+    name="java.vm.specification.name" value="Java Virtual Machine Specification">
+</property>
+    <property 
+    name="user.dir" value="/home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly">
+</property>
+    <property name="java.runtime.version" value="1.8.0_211-b12"> </property>
+    <property name="spark.ui.enabled" value="false"> </property>
+    <property 
+    name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment">
+</property>
+    <property 
+    name="basedir" value="/home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly">
+</property>
+    <property 
+    name="java.endorsed.dirs" value="/home/james/install/jdk1.8.0_211/jre/lib/endorsed">
+</property>
+    <property name="os.arch" value="amd64"> </property>
+    <property 
+    name="java.io.tmpdir" value="/home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/tmp">
+</property>
+    <property name="derby.system.durability" value="test"> </property>
+    <property name="line.separator" value=" "> </property>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation">
+    </property>
+    <property name="os.name" value="Linux"> </property>
+    <property 
+    name="log4j.configuration" value="file:src/test/resources/log4j.properties">
+</property>
+    <property name="sun.jnu.encoding" value="UTF-8"> </property>
+    <property name="spark.ui.showConsoleProgress" value="false"> </property>
+    <property 
+    name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib">
+</property>
+    <property 
+    name="java.specification.name" value="Java Platform API Specification">
+</property>
+    <property name="java.class.version" value="52.0"> </property>
+    <property 
+    name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers">
+</property>
+    <property name="os.version" value="4.18.0-25-generic"> </property>
+    <property name="user.home" value="/home/james"> </property>
+    <property name="user.timezone" value=""> </property>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob">
+    </property>
+    <property name="java.specification.version" value="1.8"> </property>
+    <property name="file.encoding" value="UTF-8"> </property>
+    <property name="spark.testing" value="1"> </property>
+    <property name="user.name" value="james"> </property>
+    <property 
+    name="java.class.path" value="/home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/scala-2.11/test-classes:/home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/scala-2.11/classes:/home/james/workspace4os/spark-2.4.6/external/kafka-0-10/target/spark-streaming-kafka-0-10_2.11-2.4.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0.jar:/home/james/workspace4os/spark-2.4.6/common/tags/target/spark-tags_2.11-2.4.6.jar:/home/james/workspace4os/spark-2.4.6/streaming/target/spark-streaming_2.11-2.4.6.jar:/home/james/workspace4os/spark-2.4.6/core/target/spark-core_2.11-2.4.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/avro/avro/1.8.2/avro-1.8.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/tukaani/xz/1.5/xz-1.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/twitter/chill_2.11/0.9.3/chill_2.11-0.9.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/esotericsoftware/kryo-shaded/4.0.2/kryo-shaded-4.0.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/twitter/chill-java/0.9.3/chill-java-0.9.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.jar:/home/james/workspace4os/spark-2.4.6/launcher/target/spark-launcher_2.11-2.4.6.jar:/home/james/workspace4os/spark-2.4.6/common/kvstore/target/spark-kvstore_2.11-2.4.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/james/workspace4os/spark-2.4.6/common/network-common/target/spark-network-common_2.11-2.4.6.jar:/home/james/workspace4os/spark-2.4.6/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.6.jar:/home/james/workspace4os/spark-2.4.6/common/unsafe/target/spark-unsafe_2.11-2.4.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-plus/9.3.27.v20190418/jetty-plus-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-webapp/9.3.27.v20190418/jetty-webapp-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-xml/9.3.27.v20190418/jetty-xml-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-jndi/9.3.27.v20190418/jetty-jndi-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-util/9.3.27.v20190418/jetty-util-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-server/9.3.27.v20190418/jetty-server-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-io/9.3.27.v20190418/jetty-io-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-http/9.3.27.v20190418/jetty-http-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-servlet/9.3.27.v20190418/jetty-servlet-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/eclipse/jetty/jetty-servlets/9.3.27.v20190418/jetty-servlets-9.3.27.v20190418.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/ning/compress-lzf/1.0.3/compress-lzf-1.0.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/github/luben/zstd-jni/1.3.2-2/zstd-jni-1.3.2-2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/roaringbitmap/RoaringBitmap/0.7.45/RoaringBitmap-0.7.45.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/roaringbitmap/shims/0.7.45/shims-0.7.45.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-net/commons-net/3.1/commons-net-3.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/json4s/json4s-jackson_2.11/3.5.3/json4s-jackson_2.11-3.5.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/json4s/json4s-core_2.11/3.5.3/json4s-core_2.11-3.5.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/json4s/json4s-ast_2.11/3.5.3/json4s-ast_2.11-3.5.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/json4s/json4s-scalap_2.11/3.5.3/json4s-scalap_2.11-3.5.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/core/jersey-client/2.22.2/jersey-client-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/hk2/hk2-api/2.4.0-b34/hk2-api-2.4.0-b34.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/hk2/hk2-utils/2.4.0-b34/hk2-utils-2.4.0-b34.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b34/aopalliance-repackaged-2.4.0-b34.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/hk2/external/javax.inject/2.4.0-b34/javax.inject-2.4.0-b34.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/hk2/hk2-locator/2.4.0-b34/hk2-locator-2.4.0-b34.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/core/jersey-common/2.22.2/jersey-common-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.22.2/jersey-guava-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/core/jersey-server/2.22.2/jersey-server-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/media/jersey-media-jaxb/2.22.2/jersey-media-jaxb-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/containers/jersey-container-servlet/2.22.2/jersey-container-servlet-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.2/jersey-container-servlet-core-2.22.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/io/netty/netty-all/4.1.47.Final/netty-all-4.1.47.Final.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/io/dropwizard/metrics/metrics-jvm/3.1.5/metrics-jvm-3.1.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/io/dropwizard/metrics/metrics-json/3.1.5/metrics-json-3.1.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/io/dropwizard/metrics/metrics-graphite/3.1.5/metrics-graphite-3.1.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/fasterxml/jackson/core/jackson-databind/2.6.7.3/jackson-databind-2.6.7.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.6.7.1/jackson-module-scala_2.11-2.6.7.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/fasterxml/jackson/module/jackson-module-paranamer/2.7.9/jackson-module-paranamer-2.7.9.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/ivy/ivy/2.4.0/ivy-2.4.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/oro/oro/2.0.8/oro-2.0.8.jar:/home/james/_AllDocMap/06_Software/maven_repo/net/razorvine/pyrolite/4.13/pyrolite-4.13.jar:/home/james/_AllDocMap/06_Software/maven_repo/net/sf/py4j/py4j/0.10.7/py4j-0.10.7.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/lz4/lz4-java/1.4.0/lz4-java-1.4.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-client/2.6.5/hadoop-client-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-common/2.6.5/hadoop-common-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/xmlenc/xmlenc/0.52/xmlenc-0.52.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-digester/commons-digester/1.8/commons-digester-1.8.jar:/home/james/_AllDocMap/06_Software/maven_repo/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-auth/2.6.5/hadoop-auth-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/directory/server/apacheds-kerberos-codec/2.0.0-M15/apacheds-kerberos-codec-2.0.0-M15.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/directory/server/apacheds-i18n/2.0.0-M15/apacheds-i18n-2.0.0-M15.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/directory/api/api-asn1-api/1.0.0-M20/api-asn1-api-1.0.0-M20.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/directory/api/api-util/1.0.0-M20/api-util-1.0.0-M20.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/curator/curator-client/2.6.0/curator-client-2.6.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-hdfs/2.6.5/hadoop-hdfs-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/james/_AllDocMap/06_Software/maven_repo/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-mapreduce-client-app/2.6.5/hadoop-mapreduce-client-app-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-mapreduce-client-common/2.6.5/hadoop-mapreduce-client-common-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-yarn-client/2.6.5/hadoop-yarn-client-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-yarn-server-common/2.6.5/hadoop-yarn-server-common-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.6.5/hadoop-mapreduce-client-shuffle-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.5/hadoop-mapreduce-client-core-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-yarn-common/2.6.5/hadoop-yarn-common-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.6.5/hadoop-mapreduce-client-jobclient-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/hadoop/hadoop-annotations/2.6.5/hadoop-annotations-2.6.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/avro/avro-mapred/1.8.2/avro-mapred-1.8.2-hadoop2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/avro/avro-ipc/1.8.2/avro-ipc-1.8.2.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/curator/curator-recipes/2.6.0/curator-recipes-2.6.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/curator/curator-framework/2.6.0/curator-framework-2.6.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/home/james/_AllDocMap/06_Software/maven_repo/io/netty/netty/3.9.9.Final/netty-3.9.9.Final.jar:/home/james/_AllDocMap/06_Software/maven_repo/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/xerial/snappy/snappy-java/1.1.7.5/snappy-java-1.1.7.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-lang/modules/scala-parser-combinators_2.11/1.1.0/scala-parser-combinators_2.11-1.1.0.jar:/home/james/_AllDocMap/06_Software/maven_repo/junit/junit/4.12/junit-4.12.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/james/_AllDocMap/06_Software/maven_repo/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/james/_AllDocMap/06_Software/maven_repo/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar">
+</property>
+    <property name="java.vm.specification.version" value="1.8"> </property>
+    <property name="sun.arch.data.model" value="64"> </property>
+    <property name="java.home" value="/home/james/install/jdk1.8.0_211/jre">
+    </property>
+    <property 
+    name="sun.java.command" value="org.scalatest.tools.Runner -R /home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/scala-2.11/classes /home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/scala-2.11/test-classes -o -f /home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/surefire-reports/SparkTestSuite.txt -u /home/james/workspace4os/spark-2.4.6/external/kafka-0-10-assembly/target/surefire-reports/.">
+</property>
+    <property name="java.specification.vendor" value="Oracle Corporation">
+    </property>
+    <property name="user.language" value="zh"> </property>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"> </property>
+    <property name="java.vm.info" value="mixed mode"> </property>
+    <property name="java.version" value="1.8.0_211"> </property>
+    <property 
+    name="java.ext.dirs" value="/home/james/install/jdk1.8.0_211/jre/lib/ext:/usr/java/packages/lib/ext">
+</property>
+    <property 
+    name="sun.boot.class.path" value="/home/james/install/jdk1.8.0_211/jre/lib/resources.jar:/home/james/install/jdk1.8.0_211/jre/lib/rt.jar:/home/james/install/jdk1.8.0_211/jre/lib/sunrsasign.jar:/home/james/install/jdk1.8.0_211/jre/lib/jsse.jar:/home/james/install/jdk1.8.0_211/jre/lib/jce.jar:/home/james/install/jdk1.8.0_211/jre/lib/charsets.jar:/home/james/install/jdk1.8.0_211/jre/lib/jfr.jar:/home/james/install/jdk1.8.0_211/jre/classes">
+</property>
+    <property 
+    name="spark.test.home" value="/home/james/workspace4os/spark-2.4.6">
+</property>
+    <property name="java.vendor" value="Oracle Corporation"> </property>
+    <property name="java.awt.headless" value="true"> </property>
+    <property name="file.separator" value="/"> </property>
+    <property 
+    name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/">
+</property>
+    <property name="spark.unsafe.exceptionOnMemoryLeak" value="true">
+    </property>
+    <property name="sun.cpu.endian" value="little"> </property>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"> </property>
+    <property name="sun.desktop" value="gnome"> </property>
+    <property name="test.src.tables" value="__not_used__"> </property>
+    <property name="sun.cpu.isalist" value=""> </property>
+  </properties>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
