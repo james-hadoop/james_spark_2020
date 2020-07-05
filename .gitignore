@@ -6,5 +6,5 @@
 *.iml
 /src/main/resources/data
 *.log
- /spark-2.4.6/assembly/target
- ./spark-2.4.6/assembly/target
+ /spark-2.4.6/.idea/
+ /spark-2.4.6/.settings/
