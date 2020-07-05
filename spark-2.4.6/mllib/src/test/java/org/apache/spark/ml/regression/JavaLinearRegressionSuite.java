@@ -30,6 +30,12 @@ import org.apache.spark.ml.feature.LabeledPoint;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 
+// TODO
+/**
+ * create by James on 2020-07-06.
+ *
+ * Linear regression test case
+ */
 public class JavaLinearRegressionSuite extends SharedSparkSession {
   private transient Dataset<Row> dataset;
   private transient JavaRDD<LabeledPoint> datasetRDD;

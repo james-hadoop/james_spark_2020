@@ -27,6 +27,12 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 // $example off$
 
+// TODO
+/**
+ * create by James on 2020-07-06.
+ *
+ * Linear regression example
+ */
 public class JavaLinearRegressionWithElasticNetExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
