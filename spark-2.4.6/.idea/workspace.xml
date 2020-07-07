@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f0a005-9999-47ae-b8ee-cb01f799f203" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/ml/JavaLinearRegressionWithElasticNetExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/ml/JavaLinearRegressionWithElasticNetExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mllib/src/test/java/org/apache/spark/ml/regression/JavaLinearRegressionSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/mllib/src/test/java/org/apache/spark/ml/regression/JavaLinearRegressionSuite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/tools/target/" />
@@ -55,11 +56,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="182" column="13" lean-forward="true" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="22" />
+            <state relative-caret-position="22">
+              <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/install/jdk1.8.0_211/src.zip!/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4598">
+              <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+              <folding>
+                <element signature="e#5748#5749#0" expanded="true" />
+                <element signature="e#5784#5785#0" expanded="true" />
+                <element signature="e#10065#10066#0" expanded="true" />
+                <element signature="e#10148#10149#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mllib/src/test/java/org/apache/spark/ml/regression/JavaLinearRegressionSuite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -90,6 +106,8 @@
       <find>MultivariateOnlineSummarizer</find>
       <find>LinearRegressionModel</find>
       <find>class LinearRegressionModel</find>
+      <find>def predict</find>
+      <find>def train</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,9 +117,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/ml/LinearRegressionExample.scala" />
-        <option value="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/ml/JavaLinearRegressionWithElasticNetExample.java" />
         <option value="$PROJECT_DIR$/mllib/src/test/java/org/apache/spark/ml/regression/JavaLinearRegressionSuite.java" />
+        <option value="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" />
       </list>
     </option>
   </component>
@@ -136,82 +154,29 @@
         <subPane>
           <expand>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="ml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
-              <item name="mllib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -219,31 +184,56 @@
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
+              <item name="mllib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
+              <item name="mllib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
               <item name="ml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spark-parent_2.11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark-2.4.6" type="462c0819:PsiDirectoryNode" />
               <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
               <item name="ml" type="462c0819:PsiDirectoryNode" />
               <item name="regression" type="462c0819:PsiDirectoryNode" />
@@ -258,14 +248,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/install/jdk1.8.0_211" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.1484375" />
     <property name="project.structure.side.proportion" value="0.5114679" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -279,7 +269,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LinearRegressionExample">
+  <component name="RunManager" selected="Maven.MAVEN-spark-parent_2.11">
     <configuration name="LinearRegressionExample" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.spark.examples.ml.LinearRegressionExample" />
       <module name="spark-examples_2.11" />
@@ -326,8 +316,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.MAVEN-spark-parent_2.11" />
       <item itemvalue="Application.LinearRegressionExample" />
+      <item itemvalue="Maven.MAVEN-spark-parent_2.11" />
     </list>
     <recent_temporary>
       <list>
@@ -343,7 +333,7 @@
     </option>
   </component>
   <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",ALPHA_SORTER_IGNORING_TEST_NODES" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_SORTER_IGNORING_TEST_NODES,SCALA_SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -359,25 +349,24 @@
       <workItem from="1593784893087" duration="632000" />
       <workItem from="1593818181220" duration="806000" />
       <workItem from="1593819024256" duration="18877000" />
+      <workItem from="1593992689398" duration="1614000" />
+      <workItem from="1594082545501" duration="328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20873000" />
+    <option name="totallyTimeSpent" value="22815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="980" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6296959" visible="true" weight="0.3146965" />
-      <window_info id="Structure" order="1" sideWeight="0.3703041" side_tool="true" visible="true" weight="0.3146965" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.15189873" visible="true" weight="0.2683706" />
+      <window_info id="Structure" order="1" sideWeight="0.84810126" side_tool="true" visible="true" weight="0.2683706" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.370317" side_tool="true" weight="0.3146965" />
-      <window_info anchor="bottom" id="Messages" weight="0.03504673" />
-      <window_info anchor="bottom" id="Tail" />
+      <window_info id="Favorites" order="6" sideWeight="0.37149534" side_tool="true" weight="0.31789136" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.34696263" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32126167" />
@@ -386,13 +375,15 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="REST Client" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.18925233" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.63084114" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Sequence" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.03504673" />
+      <window_info anchor="bottom" id="Tail" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -551,17 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/install/jdk1.8.0_211/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="true" />
-            <element signature="e#5784#5785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/Predictor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -585,8 +565,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="182" column="13" lean-forward="true" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="22" />
+        <state relative-caret-position="22">
+          <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/install/jdk1.8.0_211/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4598">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5784#5785#0" expanded="true" />
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -657,11 +650,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>spark-assembly_2.11</last-edited>
+          <last-edited>spark-2.4.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.5114679" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -669,7 +663,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>jdk1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

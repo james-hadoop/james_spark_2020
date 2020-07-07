@@ -313,6 +313,12 @@ class LinearRegression @Since("1.3.0") (@Since("1.3.0") override val uid: String
   def setLoss(value: String): this.type = set(loss, value)
   setDefault(loss -> SquaredError)
 
+  // TODO
+  /**
+   * create by James on 2020-07-06.
+   *
+   * train()
+   */
   /**
    * Sets the value of param [[epsilon]].
    * Default is 1.35.
@@ -682,6 +688,12 @@ class LinearRegressionModel private[ml] (
   @Since("1.5.0")
   def hasSummary: Boolean = trainingSummary.isDefined
 
+  // TODO
+  /**
+   * create by James on 2020-07-06.
+   *
+   *  evaluate()
+   */
   /**
    * Evaluates the model on a test dataset.
    *
@@ -710,6 +722,12 @@ class LinearRegressionModel private[ml] (
   }
 
 
+  // TODO
+  /**
+   * create by James on 2020-07-06.
+   *
+   * predict()
+   */
   override def predict(features: Vector): Double = {
     dot(features, coefficients) + intercept
   }
