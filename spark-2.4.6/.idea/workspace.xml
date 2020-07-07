@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f0a005-9999-47ae-b8ee-cb01f799f203" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/mllib/JavaLinearRegressionWithSGDExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/mllib/JavaLinearRegressionWithSGDExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/mllib/regression/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/mllib/regression/LinearRegression.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/tools/target/" />
@@ -52,49 +49,57 @@
       <favorite_root url="org.apache.spark.examples.ml.LDAExample$" module="spark-examples_2.11" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
       <favorite_root url="org.apache.spark.examples.ml.LogisticRegressionExample$" module="spark-examples_2.11" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
       <favorite_root url="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/AFTSurvivalRegression.scala" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/mllib/JavaLinearRegressionWithSGDExample.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
     </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
+            <state relative-caret-position="-94">
+              <caret line="319" column="12" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/install/jdk1.8.0_211/src.zip!/java/lang/Object.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/mllib/regression/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4598">
-              <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+            <state relative-caret-position="-28">
+              <caret line="129" column="36" lean-forward="true" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
               <folding>
-                <element signature="e#5748#5749#0" expanded="true" />
-                <element signature="e#5784#5785#0" expanded="true" />
-                <element signature="e#10065#10066#0" expanded="true" />
-                <element signature="e#10148#10149#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/ml/JavaLinearRegressionWithElasticNetExample.java">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/mllib/JavaLinearRegressionWithSGDExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="80">
+              <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-end-line="31" />
+              <folding>
+                <element signature="e#0#3059#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mllib/src/test/java/org/apache/spark/ml/regression/JavaLinearRegressionSuite.java">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/mllib/LinearRegressionWithSGDExample.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="110">
+              <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="67" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/mllib/ridge-data/lpsa.data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1037" />
           </provider>
         </entry>
       </file>
@@ -108,6 +113,8 @@
       <find>class LinearRegressionModel</find>
       <find>def predict</find>
       <find>def train</find>
+      <find>train()</find>
+      <find>train</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,6 +127,8 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/ml/JavaLinearRegressionWithElasticNetExample.java" />
         <option value="$PROJECT_DIR$/mllib/src/test/java/org/apache/spark/ml/regression/JavaLinearRegressionSuite.java" />
         <option value="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/mllib/JavaLinearRegressionWithSGDExample.java" />
+        <option value="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/mllib/regression/LinearRegression.scala" />
       </list>
     </option>
   </component>
@@ -223,7 +232,7 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="apache" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
-              <item name="ml" type="462c0819:PsiDirectoryNode" />
+              <item name="mllib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spark-2.4.6" type="b2602c69:ProjectViewProjectNode" />
@@ -235,7 +244,7 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="apache" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
-              <item name="ml" type="462c0819:PsiDirectoryNode" />
+              <item name="mllib" type="462c0819:PsiDirectoryNode" />
               <item name="regression" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -333,6 +342,7 @@
     </option>
   </component>
   <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
     <option name="ACTIVE_ACTIONS" value=",ALPHA_SORTER_IGNORING_TEST_NODES,SCALA_SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
@@ -350,32 +360,33 @@
       <workItem from="1593818181220" duration="806000" />
       <workItem from="1593819024256" duration="18877000" />
       <workItem from="1593992689398" duration="1614000" />
-      <workItem from="1594082545501" duration="328000" />
+      <workItem from="1594082545501" duration="1454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22815000" />
+    <option name="totallyTimeSpent" value="23941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="980" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.15189873" visible="true" weight="0.2683706" />
-      <window_info id="Structure" order="1" sideWeight="0.84810126" side_tool="true" visible="true" weight="0.2683706" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.11147011" visible="true" weight="0.26783812" />
+      <window_info id="Structure" order="1" sideWeight="0.8885299" side_tool="true" weight="0.26783812" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.37149534" side_tool="true" weight="0.31789136" />
+      <window_info id="Favorites" order="6" sideWeight="0.8890877" side_tool="true" weight="0.26783812" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.34696263" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.27686915" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32126167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="REST Client" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.63084114" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2885514" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Sequence" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -445,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/mllib/LinearRegressionWithSGDExample.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/ml/LinearRegressionExample.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -494,16 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/mllib/regression/LinearRegression.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -563,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/install/jdk1.8.0_211/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4598">
@@ -594,6 +581,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/mllib/ridge-data/lpsa.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1037" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/mllib/LinearRegressionWithSGDExample.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/spark/examples/mllib/JavaLinearRegressionWithSGDExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#3059#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/LinearRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="319" column="12" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/mllib/regression/LinearRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="129" column="36" lean-forward="true" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

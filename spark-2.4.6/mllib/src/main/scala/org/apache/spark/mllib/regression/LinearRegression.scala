@@ -123,6 +123,12 @@ class LinearRegressionWithSGD private[mllib] (
 @deprecated("Use ml.regression.LinearRegression or LBFGS", "2.0.0")
 object LinearRegressionWithSGD {
 
+  // TODO
+  /**
+   * create by James on 2020-07-07.
+   *
+   * LinearRegressionWithSGD.train()
+   */
   /**
    * Train a Linear Regression model given an RDD of (label, features) pairs. We run a fixed number
    * of iterations of gradient descent using the specified step size. Each iteration uses

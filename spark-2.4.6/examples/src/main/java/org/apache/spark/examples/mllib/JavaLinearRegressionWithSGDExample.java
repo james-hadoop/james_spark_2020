@@ -57,6 +57,12 @@ public class JavaLinearRegressionWithSGDExample {
     // Building the model
     int numIterations = 100;
     double stepSize = 0.00000001;
+    // TODO
+    /**
+     * create by James on 2020-07-07.
+     *
+     * LinearRegressionWithSGD.train()
+     */
     LinearRegressionModel model =
       LinearRegressionWithSGD.train(JavaRDD.toRDD(parsedData), numIterations, stepSize);
 
