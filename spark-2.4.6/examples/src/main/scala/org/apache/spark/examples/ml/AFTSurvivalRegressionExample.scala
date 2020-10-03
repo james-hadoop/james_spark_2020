@@ -54,6 +54,9 @@ object AFTSurvivalRegressionExample {
       .setQuantilesCol("quantiles")
 
     val model = aft.fit(training)
+    println("------------------------ model.explainParams() ------------------------")
+    println(model.explainParams())
+    println("------------------------ model.explainParams() ------------------------")
 
     // Print the coefficients, intercept and scale parameter for AFT survival regression
     println(s"Coefficients: ${model.coefficients}")

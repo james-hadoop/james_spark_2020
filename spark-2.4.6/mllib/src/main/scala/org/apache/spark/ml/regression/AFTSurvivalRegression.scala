@@ -298,7 +298,7 @@ class AFTSurvivalRegression @Since("1.6.0")(@Since("1.6.0") override val uid: St
     val states = optimizer.iterations(new CachedDiffFunction(costFun),
       initialParameters.asBreeze.toDenseVector)
     println(">>> states")
-//    println(states.size)
+// println(states.size)
 
     // TODO
     /**
