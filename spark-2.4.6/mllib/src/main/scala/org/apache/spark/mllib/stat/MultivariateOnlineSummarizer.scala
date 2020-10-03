@@ -20,6 +20,12 @@ package org.apache.spark.mllib.stat
 import org.apache.spark.annotation.{DeveloperApi, Since}
 import org.apache.spark.mllib.linalg.{Vector, Vectors}
 
+// TODO
+/**
+ * create by james on 2020-10-03.
+ *
+ * class MultivariateOnlineSummarizer
+ */
 /**
  * :: DeveloperApi ::
  * MultivariateOnlineSummarizer implements [[MultivariateStatisticalSummary]] to compute the mean,

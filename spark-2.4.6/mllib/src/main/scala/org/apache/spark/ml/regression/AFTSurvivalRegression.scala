@@ -53,6 +53,7 @@ private[regression] trait AFTSurvivalRegressionParams extends Params
    * Param for censor column name.
    * The value of this column could be 0 or 1.
    * If the value is 1, it means the event has occurred i.e. uncensored; otherwise censored.
+   *
    * @group param
    */
   @Since("1.6.0")
@@ -61,12 +62,14 @@ private[regression] trait AFTSurvivalRegressionParams extends Params
   /** @group getParam */
   @Since("1.6.0")
   def getCensorCol: String = $(censorCol)
+
   setDefault(censorCol -> "censor")
 
   /**
    * Param for quantile probabilities array.
    * Values of the quantile probabilities array should be in the range (0, 1)
    * and the array should be non-empty.
+   *
    * @group param
    */
   @Since("1.6.0")
@@ -77,11 +80,13 @@ private[regression] trait AFTSurvivalRegressionParams extends Params
   /** @group getParam */
   @Since("1.6.0")
   def getQuantileProbabilities: Array[Double] = $(quantileProbabilities)
+
   setDefault(quantileProbabilities -> Array(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
   /**
    * Param for quantiles column name.
    * This column will output quantiles of corresponding quantileProbabilities if it is set.
+   *
    * @group param
    */
   @Since("1.6.0")
@@ -98,13 +103,14 @@ private[regression] trait AFTSurvivalRegressionParams extends Params
 
   /**
    * Validates and transforms the input schema with the provided param map.
-   * @param schema input schema
+   *
+   * @param schema  input schema
    * @param fitting whether this is in fitting or prediction
    * @return output schema
    */
   protected def validateAndTransformSchema(
-      schema: StructType,
-      fitting: Boolean): StructType = {
+                                            schema: StructType,
+                                            fitting: Boolean): StructType = {
     SchemaUtils.checkColumnType(schema, $(featuresCol), new VectorUDT)
     if (fitting) {
       SchemaUtils.checkNumericType(schema, $(censorCol))
@@ -128,9 +134,9 @@ private[regression] trait AFTSurvivalRegressionParams extends Params
  */
 @Experimental
 @Since("1.6.0")
-class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: String)
+class AFTSurvivalRegression @Since("1.6.0")(@Since("1.6.0") override val uid: String)
   extends Estimator[AFTSurvivalRegressionModel] with AFTSurvivalRegressionParams
-  with DefaultParamsWritable with Logging {
+    with DefaultParamsWritable with Logging {
 
   @Since("1.6.0")
   def this() = this(Identifiable.randomUID("aftSurvReg"))
@@ -162,29 +168,35 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
   /**
    * Set if we should fit the intercept
    * Default is true.
+   *
    * @group setParam
    */
   @Since("1.6.0")
   def setFitIntercept(value: Boolean): this.type = set(fitIntercept, value)
+
   setDefault(fitIntercept -> true)
 
   /**
    * Set the maximum number of iterations.
    * Default is 100.
+   *
    * @group setParam
    */
   @Since("1.6.0")
   def setMaxIter(value: Int): this.type = set(maxIter, value)
+
   setDefault(maxIter -> 100)
 
   /**
    * Set the convergence tolerance of iterations.
    * Smaller value will lead to higher accuracy with the cost of more iterations.
    * Default is 1E-6.
+   *
    * @group setParam
    */
   @Since("1.6.0")
   def setTol(value: Double): this.type = set(tol, value)
+
   setDefault(tol -> 1E-6)
 
   /**
@@ -192,10 +204,12 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
    * If the dimensions of features or the number of partitions are large,
    * this param could be adjusted to a larger size.
    * Default is 2.
+   *
    * @group expertSetParam
    */
   @Since("2.1.0")
   def setAggregationDepth(value: Int): this.type = set(aggregationDepth, value)
+
   setDefault(aggregationDepth -> 2)
 
   /**
@@ -205,9 +219,9 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
   protected[ml] def extractAFTPoints(dataset: Dataset[_]): RDD[AFTPoint] = {
     dataset.select(col($(featuresCol)), col($(labelCol)).cast(DoubleType),
       col($(censorCol)).cast(DoubleType)).rdd.map {
-        case Row(features: Vector, label: Double, censor: Double) =>
-          AFTPoint(features, label, censor)
-      }
+      case Row(features: Vector, label: Double, censor: Double) =>
+        AFTPoint(features, label, censor)
+    }
   }
 
   @Since("2.0.0")
@@ -228,27 +242,50 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
     }
 
     val featuresStd = featuresSummarizer.variance.toArray.map(math.sqrt)
-    val numFeatures = featuresStd.size
+    val numFeatures = featuresStd.size // 2
+    println(">>> featuresStd")
+    println(featuresStd)
 
+    // Instrumentation: [736233b2] Stage class: AFTSurvivalRegression
+    // Instrumentation: [736233b2] Stage uid: aftSurvReg_8ea60eeb808e
     instr.logPipelineStage(this)
+    // Instrumentation: [736233b2] training: numPartitions=1 storageLevel=StorageLevel(1 replicas)
     instr.logDataset(dataset)
+    // Instrumentation: [736233b2] {"quantilesCol":"quantiles"}
     instr.logParams(this, labelCol, featuresCol, censorCol, predictionCol, quantilesCol,
       fitIntercept, maxIter, tol, aggregationDepth)
+    // Instrumentation: [736233b2] {"quantileProbabilities.size":2}
     instr.logNamedValue("quantileProbabilities.size", $(quantileProbabilities).length)
+    // Instrumentation: [736233b2] {"numFeatures":2}
     instr.logNumFeatures(numFeatures)
+    // Instrumentation: [736233b2] {"numExamples":5}
     instr.logNumExamples(featuresSummarizer.count)
 
     if (!$(fitIntercept) && (0 until numFeatures).exists { i =>
-        featuresStd(i) == 0.0 && featuresSummarizer.mean(i) != 0.0 }) {
+      featuresStd(i) == 0.0 && featuresSummarizer.mean(i) != 0.0
+    }) {
       instr.logWarning("Fitting AFTSurvivalRegressionModel without intercept on dataset with " +
         "constant nonzero column, Spark MLlib outputs zero coefficients for constant nonzero " +
         "columns. This behavior is different from R survival::survreg.")
     }
 
+    // Broadcast featuresStd
     val bcFeaturesStd = instances.context.broadcast(featuresStd)
 
+    // TODO
+    /**
+     * create by james on 2020-10-03.
+     *
+     * costFun = new AFTCostFun
+     * optimizer = new BreezeLBFGS
+     */
     val costFun = new AFTCostFun(instances, $(fitIntercept), bcFeaturesStd, $(aggregationDepth))
     val optimizer = new BreezeLBFGS[BDV[Double]]($(maxIter), 10, $(tol))
+    println(">>> optimizer")
+    println($(fitIntercept)) // true
+    println($(aggregationDepth)) // 2
+    println($(maxIter)) // 100
+    println($(tol)) // 1.0E-6
 
     /*
        The parameters vector has three parts:
@@ -260,13 +297,24 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
 
     val states = optimizer.iterations(new CachedDiffFunction(costFun),
       initialParameters.asBreeze.toDenseVector)
+    println(">>> states")
+//    println(states.size)
 
+    // TODO
+    /**
+     * create by james on 2020-10-03.
+     *
+     * parameters 是训练的结果
+     */
+    println(">>> parameters")
     val parameters = {
       val arrayBuilder = mutable.ArrayBuilder.make[Double]
       var state: optimizer.State = null
       while (states.hasNext) {
+        // Get the newest state as parameters
         state = states.next()
-        arrayBuilder += state.adjustedValue
+//        arrayBuilder += state.adjustedValue
+//        println("state.adjustedValue = " + state.adjustedValue)
       }
       if (state == null) {
         val msg = s"${optimizer.getClass.getName} failed."
@@ -278,10 +326,13 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
     bcFeaturesStd.destroy(blocking = false)
     if (handlePersistence) instances.unpersist()
 
+    println("parameters.size = " + parameters.size) // 2
     val rawCoefficients = parameters.slice(2, parameters.length)
     var i = 0
     while (i < numFeatures) {
-      rawCoefficients(i) *= { if (featuresStd(i) != 0.0) 1.0 / featuresStd(i) else 0.0 }
+      rawCoefficients(i) *= {
+        if (featuresStd(i) != 0.0) 1.0 / featuresStd(i) else 0.0
+      }
       i += 1
     }
     val coefficients = Vectors.dense(rawCoefficients)
@@ -312,11 +363,11 @@ object AFTSurvivalRegression extends DefaultParamsReadable[AFTSurvivalRegression
  */
 @Experimental
 @Since("1.6.0")
-class AFTSurvivalRegressionModel private[ml] (
-    @Since("1.6.0") override val uid: String,
-    @Since("2.0.0") val coefficients: Vector,
-    @Since("1.6.0") val intercept: Double,
-    @Since("1.6.0") val scale: Double)
+class AFTSurvivalRegressionModel private[ml](
+                                              @Since("1.6.0") override val uid: String,
+                                              @Since("2.0.0") val coefficients: Vector,
+                                              @Since("1.6.0") val intercept: Double,
+                                              @Since("1.6.0") val scale: Double)
   extends Model[AFTSurvivalRegressionModel] with AFTSurvivalRegressionParams with MLWritable {
 
   /** @group setParam */
@@ -356,7 +407,7 @@ class AFTSurvivalRegressionModel private[ml] (
   override def transform(dataset: Dataset[_]): DataFrame = {
     transformSchema(dataset.schema, logging = true)
     val predictUDF = udf { features: Vector => predict(features) }
-    val predictQuantilesUDF = udf { features: Vector => predictQuantiles(features)}
+    val predictQuantilesUDF = udf { features: Vector => predictQuantiles(features) }
     if (hasQuantilesCol) {
       dataset.withColumn($(predictionCol), predictUDF(col($(featuresCol))))
         .withColumn($(quantilesCol), predictQuantilesUDF(col($(featuresCol))))
@@ -391,9 +442,9 @@ object AFTSurvivalRegressionModel extends MLReadable[AFTSurvivalRegressionModel]
   override def load(path: String): AFTSurvivalRegressionModel = super.load(path)
 
   /** [[MLWriter]] instance for [[AFTSurvivalRegressionModel]] */
-  private[AFTSurvivalRegressionModel] class AFTSurvivalRegressionModelWriter (
-      instance: AFTSurvivalRegressionModel
-    ) extends MLWriter with Logging {
+  private[AFTSurvivalRegressionModel] class AFTSurvivalRegressionModelWriter(
+                                                                              instance: AFTSurvivalRegressionModel
+                                                                            ) extends MLWriter with Logging {
 
     private case class Data(coefficients: Vector, intercept: Double, scale: Double)
 
@@ -427,8 +478,15 @@ object AFTSurvivalRegressionModel extends MLReadable[AFTSurvivalRegressionModel]
       model
     }
   }
+
 }
 
+// TODO
+/**
+ * create by james on 2020-10-03.
+ *
+ * class AFTAggregator
+ */
 /**
  * AFTAggregator computes the gradient and loss for a AFT loss function,
  * as used in AFT survival regression for samples in sparse or dense vector in an online fashion.
@@ -444,11 +502,11 @@ object AFTSurvivalRegressionModel extends MLReadable[AFTSurvivalRegressionModel]
  * with possible right-censoring, the likelihood function under the AFT model is given as
  *
  * <blockquote>
- *    $$
- *    L(\beta,\sigma)=\prod_{i=1}^n[\frac{1}{\sigma}f_{0}
- *      (\frac{\log{t_{i}}-x^{'}\beta}{\sigma})]^{\delta_{i}}S_{0}
- *    (\frac{\log{t_{i}}-x^{'}\beta}{\sigma})^{1-\delta_{i}}
- *    $$
+ * $$
+ * L(\beta,\sigma)=\prod_{i=1}^n[\frac{1}{\sigma}f_{0}
+ * (\frac{\log{t_{i}}-x^{'}\beta}{\sigma})]^{\delta_{i}}S_{0}
+ * (\frac{\log{t_{i}}-x^{'}\beta}{\sigma})^{1-\delta_{i}}
+ * $$
  * </blockquote>
  *
  * Where $\delta_{i}$ is the indicator of the event has occurred i.e. uncensored or not.
@@ -456,10 +514,10 @@ object AFTSurvivalRegressionModel extends MLReadable[AFTSurvivalRegressionModel]
  * assumes the form
  *
  * <blockquote>
- *    $$
- *    \iota(\beta,\sigma)=\sum_{i=1}^{n}[-\delta_{i}\log\sigma+
- *    \delta_{i}\log{f_{0}}(\epsilon_{i})+(1-\delta_{i})\log{S_{0}(\epsilon_{i})}]
- *    $$
+ * $$
+ * \iota(\beta,\sigma)=\sum_{i=1}^{n}[-\delta_{i}\log\sigma+
+ * \delta_{i}\log{f_{0}}(\epsilon_{i})+(1-\delta_{i})\log{S_{0}(\epsilon_{i})}]
+ * $$
  * </blockquote>
  * Where $S_{0}(\epsilon_{i})$ is the baseline survivor function,
  * and $f_{0}(\epsilon_{i})$ is corresponding density function.
@@ -470,26 +528,26 @@ object AFTSurvivalRegressionModel extends MLReadable[AFTSurvivalRegressionModel]
  * and the $S_{0}(\epsilon)$ function is
  *
  * <blockquote>
- *    $$
- *    S_{0}(\epsilon_{i})=\exp(-e^{\epsilon_{i}})
- *    $$
+ * $$
+ * S_{0}(\epsilon_{i})=\exp(-e^{\epsilon_{i}})
+ * $$
  * </blockquote>
  *
  * and the $f_{0}(\epsilon_{i})$ function is
  *
  * <blockquote>
- *    $$
- *    f_{0}(\epsilon_{i})=e^{\epsilon_{i}}\exp(-e^{\epsilon_{i}})
- *    $$
+ * $$
+ * f_{0}(\epsilon_{i})=e^{\epsilon_{i}}\exp(-e^{\epsilon_{i}})
+ * $$
  * </blockquote>
  *
  * The log-likelihood function for Weibull distribution of lifetime is
  *
  * <blockquote>
- *    $$
- *    \iota(\beta,\sigma)=
- *    -\sum_{i=1}^n[\delta_{i}\log\sigma-\delta_{i}\epsilon_{i}+e^{\epsilon_{i}}]
- *    $$
+ * $$
+ * \iota(\beta,\sigma)=
+ * -\sum_{i=1}^n[\delta_{i}\log\sigma-\delta_{i}\epsilon_{i}+e^{\epsilon_{i}}]
+ * $$
  * </blockquote>
  *
  * Due to minimizing the negative log-likelihood equivalent to maximum a posteriori probability,
@@ -497,24 +555,24 @@ object AFTSurvivalRegressionModel extends MLReadable[AFTSurvivalRegressionModel]
  * The gradient functions for $\beta$ and $\log\sigma$ respectively are
  *
  * <blockquote>
- *    $$
- *    \frac{\partial (-\iota)}{\partial \beta}=
- *    \sum_{1=1}^{n}[\delta_{i}-e^{\epsilon_{i}}]\frac{x_{i}}{\sigma} \\
+ * $$
+ * \frac{\partial (-\iota)}{\partial \beta}=
+ * \sum_{1=1}^{n}[\delta_{i}-e^{\epsilon_{i}}]\frac{x_{i}}{\sigma} \\
  *
- *    \frac{\partial (-\iota)}{\partial (\log\sigma)}=
- *    \sum_{i=1}^{n}[\delta_{i}+(\delta_{i}-e^{\epsilon_{i}})\epsilon_{i}]
- *    $$
+ * \frac{\partial (-\iota)}{\partial (\log\sigma)}=
+ * \sum_{i=1}^{n}[\delta_{i}+(\delta_{i}-e^{\epsilon_{i}})\epsilon_{i}]
+ * $$
  * </blockquote>
  *
- * @param bcParameters The broadcasted value includes three part: The log of scale parameter,
- *                     the intercept and regression coefficients corresponding to the features.
- * @param fitIntercept Whether to fit an intercept term.
+ * @param bcParameters  The broadcasted value includes three part: The log of scale parameter,
+ *                      the intercept and regression coefficients corresponding to the features.
+ * @param fitIntercept  Whether to fit an intercept term.
  * @param bcFeaturesStd The broadcast standard deviation values of the features.
  */
 private class AFTAggregator(
-    bcParameters: Broadcast[BDV[Double]],
-    fitIntercept: Boolean,
-    bcFeaturesStd: Broadcast[Array[Double]]) extends Serializable {
+                             bcParameters: Broadcast[BDV[Double]],
+                             fitIntercept: Boolean,
+                             bcFeaturesStd: Broadcast[Array[Double]]) extends Serializable {
 
   private val length = bcParameters.value.length
   // make transient so we do not serialize between aggregation stages
@@ -531,18 +589,25 @@ private class AFTAggregator(
   private lazy val gradientSumArray = Array.ofDim[Double](length)
 
   def count: Long = totalCnt
+
   def loss: Double = {
     require(totalCnt > 0.0, s"The number of instances should be " +
       s"greater than 0.0, but got $totalCnt.")
     lossSum / totalCnt
   }
+
   def gradient: BDV[Double] = {
     require(totalCnt > 0.0, s"The number of instances should be " +
       s"greater than 0.0, but got $totalCnt.")
     new BDV(gradientSumArray.map(_ / totalCnt.toDouble))
   }
 
-
+  // TODO
+  /**
+   * create by james on 2020-10-03.
+   *
+   *org.apache.spark.ml.regression.AFTAggregator#add(org.apache.spark.ml.regression.AFTPoint)
+   */
   /**
    * Add a new training data to this AFTAggregator, and update the loss and gradient
    * of the objective function.
@@ -575,7 +640,9 @@ private class AFTAggregator(
     val multiplier = (delta - math.exp(epsilon)) / sigma
 
     gradientSumArray(0) += delta + multiplier * sigma * epsilon
-    gradientSumArray(1) += { if (fitIntercept) multiplier else 0.0 }
+    gradientSumArray(1) += {
+      if (fitIntercept) multiplier else 0.0
+    }
     xi.foreachActive { (index, value) =>
       if (localFeaturesStd(index) != 0.0 && value != 0.0) {
         gradientSumArray(index + 2) += multiplier * (value / localFeaturesStd(index))
@@ -586,6 +653,12 @@ private class AFTAggregator(
     this
   }
 
+  // TODO
+  /**
+   * create by james on 2020-10-03.
+   *
+   * org.apache.spark.ml.regression.AFTAggregator#merge(org.apache.spark.ml.regression.AFTAggregator)
+   */
   /**
    * Merge another AFTAggregator, and update the loss and gradient
    * of the objective function.
@@ -607,19 +680,31 @@ private class AFTAggregator(
     }
     this
   }
-}
+} // class AFTAggregator
 
+// TODO
+/**
+ * create by james on 2020-10-03.
+ *
+ * class AFTCostFun
+ */
 /**
  * AFTCostFun implements Breeze's DiffFunction[T] for AFT cost.
  * It returns the loss and gradient at a particular point (parameters).
  * It's used in Breeze's convex optimization routines.
  */
 private class AFTCostFun(
-    data: RDD[AFTPoint],
-    fitIntercept: Boolean,
-    bcFeaturesStd: Broadcast[Array[Double]],
-    aggregationDepth: Int) extends DiffFunction[BDV[Double]] {
+                          data: RDD[AFTPoint],
+                          fitIntercept: Boolean,
+                          bcFeaturesStd: Broadcast[Array[Double]],
+                          aggregationDepth: Int) extends DiffFunction[BDV[Double]] {
 
+  // TODO
+  /**
+   * create by james on 2020-10-03.
+   *
+   * org.apache.spark.ml.regression.AFTCostFun#calculate(breeze.linalg.DenseVector)
+   */
   override def calculate(parameters: BDV[Double]): (Double, BDV[Double]) = {
 
     val bcParameters = data.context.broadcast(parameters)
@@ -636,16 +721,16 @@ private class AFTCostFun(
     bcParameters.destroy(blocking = false)
     (aftAggregator.loss, aftAggregator.gradient)
   }
-}
+} // class AFTCostFun
 
 /**
  * Class that represents the (features, label, censor) of a data point.
  *
  * @param features List of features for this data point.
- * @param label Label for this data point.
- * @param censor Indicator of the event has occurred or not. If the value is 1, it means
+ * @param label    Label for this data point.
+ * @param censor   Indicator of the event has occurred or not. If the value is 1, it means
  *                 the event has occurred i.e. uncensored; otherwise censored.
  */
 private[regression] case class AFTPoint(features: Vector, label: Double, censor: Double) {
   require(censor == 1.0 || censor == 0.0, "censor of class AFTPoint must be 1.0 or 0.0")
-}
+} // class AFTPoint
