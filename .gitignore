@@ -6,12 +6,13 @@
 *.iml
 /src/main/resources/data
 *.log
-/spark-2.4.6/.idea
-/spark-2.4.6/.idea/
-/spark-2.4.6/.idea/*
-/spark-2.4.6/.settings/
+spark-2.4.6/.settings/
 spark-2.4.6/.idea
 spark-2.4.6/.idea/
 spark-2.4.6/.idea/*
 spark-2.4.6/.idea
 spark-2.4.6/target
+spark-2.4.6/target/
+spark-2.4.6/target/*
+spark-2.4.6/.idea/
+
