@@ -16,17 +16,19 @@
  */
 
 // scalastyle:off println
-package org.apache.spark.examples.ml
+package org.apache.spark.examples.ml.james
+
+import org.apache.spark.examples.ml.DecisionTreeExample
 
 import scala.collection.mutable
-
 import scopt.OptionParser
-
 import org.apache.spark.examples.mllib.AbstractParams
+import org.apache.spark.ml.classification.james.{JamesLogisticRegression, JamesLogisticRegressionModel}
 import org.apache.spark.ml.{Pipeline, PipelineStage}
 import org.apache.spark.ml.classification.{LogisticRegression, LogisticRegressionModel}
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.sql.{DataFrame, SparkSession}
+
 
 /**
  * An example runner for logistic regression with elastic-net (mixing L1/L2) regularization.
@@ -42,18 +44,18 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
  * }}}
  * If you use it as a template to create your own app, please use `spark-submit` to submit your app.
  */
-object LogisticRegressionExample {
+object JamesLogisticRegressionExample {
 
   case class Params(
-      input: String = null,
-      testInput: String = "",
-      dataFormat: String = "libsvm",
-      regParam: Double = 0.0,
-      elasticNetParam: Double = 0.0,
-      maxIter: Int = 100,
-      fitIntercept: Boolean = true,
-      tol: Double = 1E-6,
-      fracTest: Double = 0.2) extends AbstractParams[Params]
+                     input: String = null,
+                     testInput: String = "",
+                     dataFormat: String = "libsvm",
+                     regParam: Double = 0.0,
+                     elasticNetParam: Double = 0.0,
+                     maxIter: Int = 100,
+                     fitIntercept: Boolean = true,
+                     tol: Double = 1E-6,
+                     fracTest: Double = 0.2) extends AbstractParams[Params]
 
   def main(args: Array[String]) {
     val defaultParams = Params()
@@ -65,8 +67,8 @@ object LogisticRegressionExample {
         .action((x, c) => c.copy(regParam = x))
       opt[Double]("elasticNetParam")
         .text(s"ElasticNet mixing parameter. For alpha = 0, the penalty is an L2 penalty. " +
-        s"For alpha = 1, it is an L1 penalty. For 0 < alpha < 1, the penalty is a combination of " +
-        s"L1 and L2, default: ${defaultParams.elasticNetParam}")
+          s"For alpha = 1, it is an L1 penalty. For 0 < alpha < 1, the penalty is a combination of " +
+          s"L1 and L2, default: ${defaultParams.elasticNetParam}")
         .action((x, c) => c.copy(elasticNetParam = x))
       opt[Int]("maxIter")
         .text(s"maximum number of iterations, default: ${defaultParams.maxIter}")
@@ -76,15 +78,15 @@ object LogisticRegressionExample {
         .action((x, c) => c.copy(fitIntercept = x))
       opt[Double]("tol")
         .text(s"the convergence tolerance of iterations, Smaller value will lead " +
-        s"to higher accuracy with the cost of more iterations, default: ${defaultParams.tol}")
+          s"to higher accuracy with the cost of more iterations, default: ${defaultParams.tol}")
         .action((x, c) => c.copy(tol = x))
       opt[Double]("fracTest")
         .text(s"fraction of data to hold out for testing. If given option testInput, " +
-        s"this option is ignored. default: ${defaultParams.fracTest}")
+          s"this option is ignored. default: ${defaultParams.fracTest}")
         .action((x, c) => c.copy(fracTest = x))
       opt[String]("testInput")
         .text(s"input path to test dataset. If given, option fracTest is ignored." +
-        s" default: ${defaultParams.testInput}")
+          s" default: ${defaultParams.testInput}")
         .action((x, c) => c.copy(testInput = x))
       opt[String]("dataFormat")
         .text("data format: libsvm (default), dense (deprecated in Spark v1.1)")
@@ -129,7 +131,7 @@ object LogisticRegressionExample {
       .setOutputCol("indexedLabel")
     stages += labelIndexer
 
-    val lor = new LogisticRegression()
+    val lor = new JamesLogisticRegression()
       .setFeaturesCol("features")
       .setLabelCol("indexedLabel")
       .setRegParam(params.regParam)
@@ -147,7 +149,7 @@ object LogisticRegressionExample {
     val elapsedTime = (System.nanoTime() - startTime) / 1e9
     println(s"Training time: $elapsedTime seconds")
 
-    val lorModel = pipelineModel.stages.last.asInstanceOf[LogisticRegressionModel]
+    val lorModel = pipelineModel.stages.last.asInstanceOf[JamesLogisticRegressionModel]
     // Print the weights and intercept for logistic regression.
     println(s"Weights: ${lorModel.coefficients} Intercept: ${lorModel.intercept}")
 
@@ -159,4 +161,3 @@ object LogisticRegressionExample {
     spark.stop()
   }
 }
-// scalastyle:on println

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77f0a005-9999-47ae-b8ee-cb01f799f203" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/ml/AFTSurvivalRegressionExample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/ml/AFTSurvivalRegressionExample.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/ml/LogisticRegressionExample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/examples/src/main/scala/org/apache/spark/examples/ml/LogisticRegressionExample.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/AFTSurvivalRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/ml/regression/AFTSurvivalRegression.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1iMBAm2DfBnq9cG9MWxqsxWDulk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,20 +44,57 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.1484375" />
     <property name="project.structure.side.proportion" value="0.5114679" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.AFTSurvivalRegressionExample">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.apache.spark.ml.classification" />
+      <recent name="org.apache.spark.examples.ml" />
+      <recent name="org.apache.spark.examples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JamesLogisticRegressionExample">
     <configuration name="AFTSurvivalRegressionExample" type="Application" factoryName="Application" temporary="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.apache.spark.examples.ml.AFTSurvivalRegressionExample" />
       <module name="spark-examples_2.11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.apache.spark.examples.ml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JamesLogisticRegressionExample" type="Application" factoryName="Application" temporary="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.apache.spark.examples.ml.james.JamesLogisticRegressionExample" />
+      <module name="spark-examples_2.11" />
+      <option name="PROGRAM_PARAMETERS" value="data/mllib/sample_libsvm_data.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.apache.spark.examples.ml.james.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogisticRegressionExample" type="Application" factoryName="Application" temporary="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.apache.spark.examples.ml.LogisticRegressionExample" />
+      <module name="spark-examples_2.11" />
+      <option name="PROGRAM_PARAMETERS" value="data/mllib/sample_libsvm_data.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.apache.spark.examples.ml.*" />
@@ -95,10 +134,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.AFTSurvivalRegressionExample" />
+      <item itemvalue="Application.LogisticRegressionExample" />
+      <item itemvalue="Application.JamesLogisticRegressionExample" />
       <item itemvalue="Maven.spark-2.4.6-MAVEN" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JamesLogisticRegressionExample" />
+        <item itemvalue="Application.LogisticRegressionExample" />
         <item itemvalue="Application.AFTSurvivalRegressionExample" />
       </list>
     </recent_temporary>
@@ -125,7 +168,10 @@
       <workItem from="1594082545501" duration="1454000" />
       <workItem from="1601707446532" duration="210000" />
       <workItem from="1601707772870" duration="951000" />
-      <workItem from="1601709905586" duration="11987000" />
+      <workItem from="1601709905586" duration="13741000" />
+      <workItem from="1601800672441" duration="5433000" />
+      <workItem from="1602207533453" duration="1752000" />
+      <workItem from="1602212868395" duration="1088000" />
     </task>
     <servers />
   </component>
@@ -133,55 +179,72 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1496" y="146" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601709948702">
-      <screen x="-1920" y="-36" width="1920" height="1013" />
+    <state x="-1238" y="158" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1602213532982">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
+    </state>
+    <state x="-1238" y="158" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213532982" />
+    <state x="-1496" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602213363532">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
     </state>
     <state x="-1496" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601707609373" />
+    <state x="-1496" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213363532" />
     <state x="-1496" y="146" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601709948702" />
-    <state width="1878" height="334" key="GridCell.Tab.0.bottom" timestamp="1601725302922">
-      <screen x="-1920" y="-36" width="1920" height="1013" />
+    <state x="-1544" y="317" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602213476100">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
+    </state>
+    <state x="-1544" y="317" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213476100" />
+    <state x="-1264" y="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1602213478599">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
+    </state>
+    <state x="-1264" y="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213478599" />
+    <state width="1846" height="243" key="GridCell.Tab.0.bottom" timestamp="1602213909283">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.0.bottom/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715707577" />
-    <state width="1878" height="334" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725302922" />
-    <state width="1878" height="334" key="GridCell.Tab.0.center" timestamp="1601725302921">
-      <screen x="-1920" y="-36" width="1920" height="1013" />
+    <state width="1846" height="243" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213909283" />
+    <state width="1878" height="334" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156676" />
+    <state width="1846" height="243" key="GridCell.Tab.0.center" timestamp="1602213909283">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.0.center/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715707576" />
-    <state width="1878" height="334" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725302921" />
-    <state width="1878" height="334" key="GridCell.Tab.0.left" timestamp="1601725302920">
-      <screen x="-1920" y="-36" width="1920" height="1013" />
+    <state width="1846" height="243" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213909283" />
+    <state width="1878" height="334" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156675" />
+    <state width="1846" height="243" key="GridCell.Tab.0.left" timestamp="1602213909282">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.0.left/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715707575" />
-    <state width="1878" height="334" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725302920" />
-    <state width="1878" height="334" key="GridCell.Tab.0.right" timestamp="1601725302921">
-      <screen x="-1920" y="-36" width="1920" height="1013" />
+    <state width="1846" height="243" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213909282" />
+    <state width="1878" height="334" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156675" />
+    <state width="1846" height="243" key="GridCell.Tab.0.right" timestamp="1602213909283">
+      <screen x="-1920" y="-121" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.0.right/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715707577" />
-    <state width="1878" height="334" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725302921" />
-    <state width="1878" height="334" key="GridCell.Tab.1.bottom" timestamp="1601725287982">
+    <state width="1846" height="243" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-121.1920.1013@-1920.-121.1920.1013" timestamp="1602213909283" />
+    <state width="1878" height="334" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156676" />
+    <state width="1878" height="334" key="GridCell.Tab.1.bottom" timestamp="1601778156677">
       <screen x="-1920" y="-36" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.1.bottom/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715706841" />
-    <state width="1878" height="334" key="GridCell.Tab.1.bottom/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725287982" />
-    <state width="1878" height="334" key="GridCell.Tab.1.center" timestamp="1601725287981">
+    <state width="1878" height="334" key="GridCell.Tab.1.bottom/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156677" />
+    <state width="1878" height="334" key="GridCell.Tab.1.center" timestamp="1601778156677">
       <screen x="-1920" y="-36" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.1.center/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715706840" />
-    <state width="1878" height="334" key="GridCell.Tab.1.center/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725287981" />
-    <state width="1878" height="334" key="GridCell.Tab.1.left" timestamp="1601725287980">
+    <state width="1878" height="334" key="GridCell.Tab.1.center/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156677" />
+    <state width="1878" height="334" key="GridCell.Tab.1.left" timestamp="1601778156676">
       <screen x="-1920" y="-36" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.1.left/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715706840" />
-    <state width="1878" height="334" key="GridCell.Tab.1.left/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725287980" />
-    <state width="1878" height="334" key="GridCell.Tab.1.right" timestamp="1601725287981">
+    <state width="1878" height="334" key="GridCell.Tab.1.left/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156676" />
+    <state width="1878" height="334" key="GridCell.Tab.1.right" timestamp="1601778156677">
       <screen x="-1920" y="-36" width="1920" height="1013" />
     </state>
     <state width="1878" height="315" key="GridCell.Tab.1.right/0.23.1440.837/-1920.-36.1920.1057@-1920.-36.1920.1057" timestamp="1601715706841" />
-    <state width="1878" height="334" key="GridCell.Tab.1.right/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601725287981" />
-    <state x="-1451" y="109" key="SettingsEditor" timestamp="1601707831912">
+    <state width="1878" height="334" key="GridCell.Tab.1.right/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601778156677" />
+    <state x="-1451" y="109" key="SettingsEditor" timestamp="1601972922949">
       <screen x="-1920" y="-36" width="1920" height="1013" />
     </state>
-    <state x="-1451" y="109" key="SettingsEditor/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601707831912" />
+    <state x="-1451" y="109" key="SettingsEditor/0.23.1440.877/-1920.-36.1920.1013@-1920.-36.1920.1013" timestamp="1601972922949" />
     <state width="960" height="506" key="XDebugger.FullValuePopup" timestamp="1601712667197">
       <screen x="-1920" y="-36" width="1920" height="1013" />
     </state>

@@ -298,7 +298,7 @@ class AFTSurvivalRegression @Since("1.6.0")(@Since("1.6.0") override val uid: St
     val states = optimizer.iterations(new CachedDiffFunction(costFun),
       initialParameters.asBreeze.toDenseVector)
     println(">>> states")
-// println(states.size)
+    // println(states.size)
 
     // TODO
     /**
@@ -313,8 +313,8 @@ class AFTSurvivalRegression @Since("1.6.0")(@Since("1.6.0") override val uid: St
       while (states.hasNext) {
         // Get the newest state as parameters
         state = states.next()
-//        arrayBuilder += state.adjustedValue
-//        println("state.adjustedValue = " + state.adjustedValue)
+        //        arrayBuilder += state.adjustedValue
+        //        println("state.adjustedValue = " + state.adjustedValue)
       }
       if (state == null) {
         val msg = s"${optimizer.getClass.getName} failed."
