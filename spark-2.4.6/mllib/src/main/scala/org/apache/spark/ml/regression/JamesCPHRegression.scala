@@ -196,6 +196,70 @@ class JamesCPHRegressionModel private[ml](
 class JamesCPHRegression(@Since("1.6.0") override val uid: String)
   extends Estimator[JamesCPHRegressionModel] with JamesCPHRegressionParams
     with DefaultParamsWritable with Logging {
+
+  /**
+   * Set the maximum number of iterations.
+   * Default is 100.
+   *
+   * @group setParam
+   */
+  @Since("1.6.0")
+  def setMaxIter(value: Int): this.type = set(maxIter, value)
+
+  setDefault(maxIter -> 100)
+
+  /**
+   * Set the convergence tolerance of iterations.
+   * Smaller value will lead to higher accuracy with the cost of more iterations.
+   * Default is 1E-6.
+   *
+   * @group setParam
+   */
+  @Since("1.6.0")
+  def setTol(value: Double): this.type = set(tol, value)
+
+  setDefault(tol -> 1E-6)
+
+  /**
+   * Suggested depth for treeAggregate (greater than or equal to 2).
+   * If the dimensions of features or the number of partitions are large,
+   * this param could be adjusted to a larger size.
+   * Default is 2.
+   *
+   * @group expertSetParam
+   */
+  @Since("2.1.0")
+  def setAggregationDepth(value: Int): this.type = set(aggregationDepth, value)
+
+  setDefault(aggregationDepth -> 2)
+
+  @Since("1.6.0")
+  def this() = this(Identifiable.randomUID("aftSurvReg"))
+
+  /** @group setParam */
+  @Since("1.6.0")
+  def setFeaturesCol(value: String): this.type = set(featuresCol, value)
+
+  /** @group setParam */
+  @Since("1.6.0")
+  def setLabelCol(value: String): this.type = set(labelCol, value)
+
+  /** @group setParam */
+  @Since("1.6.0")
+  def setCensorCol(value: String): this.type = set(censorCol, value)
+
+  /** @group setParam */
+  @Since("1.6.0")
+  def setPredictionCol(value: String): this.type = set(predictionCol, value)
+
+  /** @group setParam */
+  @Since("1.6.0")
+  def setQuantileProbabilities(value: Array[Double]): this.type = set(quantileProbabilities, value)
+
+  /** @group setParam */
+  @Since("1.6.0")
+  def setQuantilesCol(value: String): this.type = set(quantilesCol, value)
+
   /**
    * Extract [[featuresCol]], [[labelCol]] and [[censorCol]] from input dataset,
    * and put it in an RDD with strong types.
