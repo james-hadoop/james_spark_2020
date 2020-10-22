@@ -478,6 +478,11 @@ private class CPHAggregator(
 
   private var totalCnt: Long = 0L
   private var lossSum = 0.0
+
+  // added by james
+  private var featureSum = 0.0
+  private var coeffSum =0.0
+
   // Here we optimize loss function over log(sigma), intercept and coefficients
   private lazy val gradientSumArray = Array.ofDim[Double](length)
 
@@ -518,8 +523,8 @@ private class CPHAggregator(
     val localFeaturesStd = bcFeaturesStd.value
 
     val margin = {
-      var featureSum = 0.0
-      var coeffSum = 0.0
+      var localFeatureSum = 0.0
+      var localCoeffSum = 0.0
 
       xi.foreachActive { (index, value) =>
         if (localFeaturesStd(index) != 0.0 && value != 0.0) {
@@ -532,12 +537,16 @@ private class CPHAggregator(
           println(s"add() index=$index value=$value intercept=$intercept sigma=$sigma")
           println("-" * 160)
 
-          featureSum += coefficients(index) * (value / localFeaturesStd(index))
-          coeffSum = coefficients(index)
+          localFeatureSum += coefficients(index) * (value / localFeaturesStd(index))
+          localCoeffSum = coefficients(index)
         }
       } // foreachActive{}
-      (featureSum + intercept, coeffSum)
+      (localFeatureSum + intercept, localCoeffSum)
     } // margin 本条CPHPoint的函数值
+
+    this.featureSum=margin._1
+    this.coefficients=margin._2
+
 
     val epsilon = (math.log(ti) - margin._1) / sigma
 
