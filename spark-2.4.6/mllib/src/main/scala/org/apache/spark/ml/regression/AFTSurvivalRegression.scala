@@ -629,6 +629,7 @@ private class AFTAggregator(
       xi.foreachActive { (index, value) =>
         if (localFeaturesStd(index) != 0.0 && value != 0.0) {
           sum += coefficients(index) * (value / localFeaturesStd(index))
+          print("debug...")
         }
       }
       sum + intercept

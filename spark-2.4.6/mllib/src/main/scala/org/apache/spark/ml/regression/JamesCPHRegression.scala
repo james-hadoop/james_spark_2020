@@ -481,7 +481,7 @@ private class CPHAggregator(
 
   // added by james
   private var featureSum = 0.0
-  private var coeffSum =0.0
+  private var coeffSum = 0.0
 
   // Here we optimize loss function over log(sigma), intercept and coefficients
   private lazy val gradientSumArray = Array.ofDim[Double](length)
@@ -539,23 +539,45 @@ private class CPHAggregator(
 
           localFeatureSum += coefficients(index) * (value / localFeaturesStd(index))
           localCoeffSum = coefficients(index)
+          print("debug...")
         }
       } // foreachActive{}
       (localFeatureSum + intercept, localCoeffSum)
     } // margin 本条CPHPoint的函数值
 
-    this.featureSum=margin._1
-    this.coefficients=margin._2
+    this.featureSum += margin._1
+    this.coeffSum += margin._2
 
 
     val epsilon = (math.log(ti) - margin._1) / sigma
 
-//    lossSum += delta * math.log(sigma) - delta * epsilon + math.exp(epsilon)
+    //    lossSum += delta * math.log(sigma) - delta * epsilon + math.exp(epsilon)
     lossSum += ti - margin._1
+
+    var beta = {
+      var localBeta = 0.0
+
+      xi.foreachActive { (index, value) => {
+        if (localFeaturesStd(index) != 0.0 && value != 0.0) {
+          println(s"index=$index._1 value=$value")
+          localBeta += value - (this.featureSum / this.coeffSum)
+          print("debug...")
+        }
+      }
+      } //xi.foreachActive {}
+
+      localBeta
+    } // beta
+    println(s"beta=$beta")
 
     val multiplier = (delta - math.exp(epsilon)) / sigma
 
-    gradientSumArray(0) += delta + multiplier * sigma * epsilon
+    if(beta.isNaN()){
+      beta=0.0
+    }
+
+//    gradientSumArray(0) += delta + multiplier * sigma * epsilon
+    gradientSumArray(0) += beta
     gradientSumArray(1) += {
       if (fitIntercept) multiplier else 0.0
     }
