@@ -234,7 +234,7 @@ class JamesCPHRegression(@Since("1.6.0") override val uid: String)
   setDefault(aggregationDepth -> 2)
 
   @Since("1.6.0")
-  def this() = this(Identifiable.randomUID("aftSurvReg"))
+  def this() = this(Identifiable.randomUID("jamesCphSurvReg"))
 
   /** @group setParam */
   @Since("1.6.0")
@@ -281,6 +281,12 @@ class JamesCPHRegression(@Since("1.6.0") override val uid: String)
     val handlePersistence = dataset.storageLevel == StorageLevel.NONE
     if (handlePersistence) instances.persist(StorageLevel.MEMORY_AND_DISK)
 
+    // TODO
+    /**
+     * create by james on 2020-10-10.
+     *
+     * MultivariateOnlineSummarizer计算dataset的均值、方差、标准差
+     */
     val featuresSummarizer = {
       val seqOp = (c: MultivariateOnlineSummarizer, v: CPHPoint) => c.add(v.features)
       val combOp = (c1: MultivariateOnlineSummarizer, c2: MultivariateOnlineSummarizer) => {
@@ -411,8 +417,8 @@ object JamesCPHRegressionModel extends MLReadable[JamesCPHRegressionModel] {
 
   /** [[MLWriter]] instance for [[JamesCPHRegressionModel]] */
   private[JamesCPHRegressionModel] class JamesCPHRegressionModelWriter(
-                                                                              instance: JamesCPHRegressionModel
-                                                                            ) extends MLWriter with Logging {
+                                                                        instance: JamesCPHRegressionModel
+                                                                      ) extends MLWriter with Logging {
 
     private case class Data(coefficients: Vector, intercept: Double, scale: Double)
 
@@ -446,9 +452,16 @@ object JamesCPHRegressionModel extends MLReadable[JamesCPHRegressionModel] {
       model
     }
   }
+
 }
 
-
+/**
+ * https://en.wikipedia.org/wiki/Proportional_hazards_model
+ *
+ * @param bcParameters
+ * @param fitIntercept
+ * @param bcFeaturesStd
+ */
 private class CPHAggregator(
                              bcParameters: Broadcast[BDV[Double]],
                              fitIntercept: Boolean,
@@ -505,17 +518,31 @@ private class CPHAggregator(
     val localFeaturesStd = bcFeaturesStd.value
 
     val margin = {
-      var sum = 0.0
+      var featureSum = 0.0
+      var coeffSum = 0.0
+
       xi.foreachActive { (index, value) =>
         if (localFeaturesStd(index) != 0.0 && value != 0.0) {
-          sum += coefficients(index) * (value / localFeaturesStd(index))
-        }
-      }
-      sum + intercept
-    }
-    val epsilon = (math.log(ti) - margin) / sigma
+          // TODO
+          /**
+           * create by james on 2020-10-12.
+           *
+           * debug
+           */
+          println(s"add() index=$index value=$value intercept=$intercept sigma=$sigma")
+          println("-" * 160)
 
-    lossSum += delta * math.log(sigma) - delta * epsilon + math.exp(epsilon)
+          featureSum += coefficients(index) * (value / localFeaturesStd(index))
+          coeffSum = coefficients(index)
+        }
+      } // foreachActive{}
+      (featureSum + intercept, coeffSum)
+    } // margin 本条CPHPoint的函数值
+
+    val epsilon = (math.log(ti) - margin._1) / sigma
+
+//    lossSum += delta * math.log(sigma) - delta * epsilon + math.exp(epsilon)
+    lossSum += ti - margin._1
 
     val multiplier = (delta - math.exp(epsilon)) / sigma
 
@@ -526,8 +553,17 @@ private class CPHAggregator(
     xi.foreachActive { (index, value) =>
       if (localFeaturesStd(index) != 0.0 && value != 0.0) {
         gradientSumArray(index + 2) += multiplier * (value / localFeaturesStd(index))
+
+        // TODO
+        /**
+         * create by james on 2020-10-12.
+         *
+         * debug
+         */
+        println("add() gradientSumArray(index + 2)= " + gradientSumArray(index + 2))
+        println("-" * 160)
       }
-    }
+    } // foreachActive{}
 
     totalCnt += 1
     this
@@ -554,6 +590,16 @@ private class CPHAggregator(
 
       var i = 0
       while (i < length) {
+        // TODO
+        /**
+         * create by james on 2020-10-12.
+         *
+         * debug
+         */
+        println("merge() this.gradientSumArray(i) " + this.gradientSumArray(i))
+        println("merge() other.gradientSumArray(i)= " + other.gradientSumArray(i))
+        println("-" * 160)
+
         this.gradientSumArray(i) += other.gradientSumArray(i)
         i += 1
       }
