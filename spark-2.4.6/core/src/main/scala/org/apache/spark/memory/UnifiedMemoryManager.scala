@@ -146,6 +146,12 @@ private[spark] class UnifiedMemoryManager private[memory] (
       numBytes, taskAttemptId, maybeGrowExecutionPool, () => computeMaxExecutionPoolSize)
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * acquireStorageMemory()
+   */
   override def acquireStorageMemory(
       blockId: BlockId,
       numBytes: Long,
@@ -179,6 +185,13 @@ private[spark] class UnifiedMemoryManager private[memory] (
     storagePool.acquireMemory(blockId, numBytes)
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * assertion failed: transferring unroll memory to storage memory failed
+   * call acquireStorageMemory()
+   */
   override def acquireUnrollMemory(
       blockId: BlockId,
       numBytes: Long,

@@ -162,6 +162,13 @@ private[spark] class MemoryStore(
     }
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * assertion failed: transferring unroll memory to storage memory failed
+   * spark内存申请的实现机制，通过acquire, reserve, unroll实现
+   */
   /**
    * Attempt to put the given block in memory store as values or bytes.
    *
@@ -256,6 +263,12 @@ private[spark] class MemoryStore(
         // Synchronize so that transfer is atomic
         memoryManager.synchronized {
           releaseUnrollMemoryForThisTask(memoryMode, unrollMemoryUsedByThisBlock)
+          // TODO
+          /**
+           * create by james on 2021-04-28.
+           *
+           * assertion failed: transferring unroll memory to storage memory failed
+           */
           val success = memoryManager.acquireStorageMemory(blockId, entry.size, memoryMode)
           assert(success, "transferring unroll memory to storage memory failed")
         }
@@ -420,6 +433,12 @@ private[spark] class MemoryStore(
     blockId.asRDDId.map(_.rddId)
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * 替换内存获取内存空间
+   */
   /**
    * Try to evict blocks to free up a given amount of space to store a particular block.
    * Can fail if either the block is bigger than our memory or it would require replacing
@@ -539,6 +558,12 @@ private[spark] class MemoryStore(
     Option(TaskContext.get()).map(_.taskAttemptId()).getOrElse(-1L)
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * assertion failed: transferring unroll memory to storage memory failed
+   */
   /**
    * Reserve memory for unrolling the given block for this task.
    *

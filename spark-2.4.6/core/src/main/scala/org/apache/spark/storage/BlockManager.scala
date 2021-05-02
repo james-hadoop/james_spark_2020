@@ -1134,6 +1134,12 @@ private[spark] class BlockManager(
     result
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * 根据StorageLevel，设置level.memoryMode
+   */
   /**
    * Put the given block according to the given level in one of the block stores, replicating
    * the values if necessary.
@@ -1179,6 +1185,13 @@ private[spark] class BlockManager(
               }
           }
         } else { // !level.deserialized
+          // TODO
+          /**
+           * create by james on 2021-04-28.
+           *
+           * assertion failed: transferring unroll memory to storage memory failed
+           * 只有使用内存的情况下才会被调用
+           */
           memoryStore.putIteratorAsBytes(blockId, iterator(), classTag, level.memoryMode) match {
             case Right(s) =>
               size = s

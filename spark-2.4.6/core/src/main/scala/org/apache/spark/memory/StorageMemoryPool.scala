@@ -63,6 +63,12 @@ private[memory] class StorageMemoryPool(
     _memoryStore = store
   }
 
+  // TODO
+  /**
+   * create by james on 2021-04-28.
+   *
+   * 申请内存的时候，还会尝试释放内存。申请将会被释放掉的内存
+   */
   /**
    * Acquire N bytes of memory to cache the given block, evicting existing ones if necessary.
    *
